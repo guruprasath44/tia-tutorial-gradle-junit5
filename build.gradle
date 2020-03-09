@@ -29,6 +29,8 @@ teamscale {
 
 }
 
+tasks.register('tiaTests', com.teamscale.TestImpacted)
+
 group 'eu.cqse.tutorials'
 version '1.0-SNAPSHOT'
 
