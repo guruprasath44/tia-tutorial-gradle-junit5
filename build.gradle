@@ -1,17 +1,7 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.teamscale:teamscale-gradle-plugin:17.0.0'
-    }
-}
-
 plugins {
     id 'java'
+    id "com.teamscale" version "21.8.0"
 }
-
-apply plugin: 'teamscale'
 
 teamscale {
 
@@ -23,8 +13,7 @@ teamscale {
     }
 
     report {
-        partition = 'Unit Tests'
-        testwiseCoverage()
+        testwiseCoverage { it.partition = 'Unit Tests' }
     }
 
 }
