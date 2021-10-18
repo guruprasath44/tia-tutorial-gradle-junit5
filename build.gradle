@@ -18,7 +18,11 @@ teamscale {
 
 }
 
-tasks.register('tiaTests', com.teamscale.TestImpacted)
+tasks.register('tiaTests', com.teamscale.TestImpacted) {
+    jacoco {
+        includes = ["tia.*"]
+    }
+}
 
 group 'eu.cqse.tutorials'
 version '1.0-SNAPSHOT'
