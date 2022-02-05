@@ -1,6 +1,6 @@
 branch=master
 eclipse.preferences.version=1
-prefixMappings=<ArrayList><item><localPrefix></localPrefix><teamscalePrefix>org.conqat.lib.commons.jar</teamscalePrefix><projectId></projectId></item></ArrayList>
+prefixMappings=<ArrayList><item><localPrefix></localPrefix><teamscalePrefix>lib/</teamscalePrefix><projectId></projectId></item></ArrayList>
 teamscaleEnabled=true
 teamscaleProject=tia-junit5
 teamscaleServer=MyTeamscaleServer
