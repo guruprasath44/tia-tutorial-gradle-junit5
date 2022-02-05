@@ -1,5 +1,22 @@
 plugins {
     id 'java'
+     id "com.teamscale" version "21.9.0"
+}
+teamscale {
+
+    server {
+        url = 'http://localhost:8080/'
+        userName = 'admin'
+        userAccessToken = 'q4tu9vfAAjQZ1peCpPvQHSrLi5CeIcGY'
+        project = 'tia-junit5'
+    }
+
+    report {
+        testwiseCoverage {
+            partition = 'Unit Tests'
+        }
+    }
+
 }
 
 group 'eu.cqse.tutorials'
@@ -31,6 +48,13 @@ tasks.withType(Test) {
         exceptionFormat "short"
         showCauses false
         events "failed", "passed"
+    }
+}
+
+tasks.register('tiaTests', com.teamscale.TestImpacted) {
+    useJUnitPlatform()
+    jacoco {
+        includes = ["tia.*"]
     }
 }
 
