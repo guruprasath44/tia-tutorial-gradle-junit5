@@ -18,7 +18,7 @@ teamscale {
 
 }
 
-/*
+
 group 'eu.cqse.tutorials'
 version '1.0-SNAPSHOT'
 
@@ -50,7 +50,7 @@ tasks.withType(Test) {
         events "failed", "passed"
     }
 }
-*/
+
 
 tasks.register('tiaTests', com.teamscale.TestImpacted) {
     useJUnitPlatform()
