@@ -1,4 +1,4 @@
-branch=step2
+branch=master
 eclipse.preferences.version=1
 prefixMappings=<ArrayList><item><localPrefix></localPrefix><teamscalePrefix></teamscalePrefix><projectId></projectId></item></ArrayList>
 teamscaleEnabled=true
