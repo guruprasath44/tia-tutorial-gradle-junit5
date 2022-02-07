@@ -1,4 +1,5 @@
 plugins {
+id "java",
      id "com.teamscale" version "21.9.0"
 }
 teamscale {
@@ -51,12 +52,12 @@ tasks.withType(Test) {
     }
 }
 
-/*
+
 tasks.register('tiaTests', com.teamscale.TestImpacted) {
     useJUnitPlatform()
     jacoco {
         includes = ["tia.*"]
     }
 }
-*/
+
 
