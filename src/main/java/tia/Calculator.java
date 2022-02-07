@@ -11,7 +11,7 @@ public class Calculator {
     }
 
     public int minus(int a, int b) {
-        System.out.println("guru");
+        System.out.println("guruprasath");
         return a - b;
     }
 
