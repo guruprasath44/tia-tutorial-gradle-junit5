@@ -2,5 +2,5 @@ branch=master
 eclipse.preferences.version=1
 prefixMappings=<ArrayList><item><localPrefix></localPrefix><teamscalePrefix>org.conqat.engine.*</teamscalePrefix><projectId></projectId></item></ArrayList>
 teamscaleEnabled=true
-teamscaleProject=tia
+teamscaleProject=tia-junit5
 teamscaleServer=MyTeamscaleServer
