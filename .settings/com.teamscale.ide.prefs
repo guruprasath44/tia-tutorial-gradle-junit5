@@ -1,6 +1,6 @@
 branch=master
 eclipse.preferences.version=1
-prefixMappings=<ArrayList/>
+prefixMappings=<ArrayList><item><localPrefix></localPrefix><teamscalePrefix>org.conqat.engine.service.shared.client.ServiceCallException</teamscalePrefix><projectId></projectId></item></ArrayList>
 teamscaleEnabled=true
-teamscaleProject=
+teamscaleProject=tia-junit5
 teamscaleServer=MyTeamscaleServer
