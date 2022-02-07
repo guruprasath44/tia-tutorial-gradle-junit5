@@ -6,7 +6,7 @@ teamscale {
     server {
         url = 'http://localhost:8080/'
         userName = 'admin'
-        userAccessToken = 'txwa0xBaTYMlvv7P7VsWmzrhtjpbPBI5'
+        userAccessToken = 'eZcmUZs4jHGQ0UUl5TYArQIpBLzfJ0X5'
         project = 'tia-junit5'
     }
 
