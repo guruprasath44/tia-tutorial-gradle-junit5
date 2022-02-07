@@ -1,7 +1,5 @@
 package tia;
-
 public class Calculator {
-
     public int sum(int a, int b) {
         return sumImpl(a, b);
     }
