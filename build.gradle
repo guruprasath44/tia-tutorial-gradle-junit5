@@ -51,11 +51,12 @@ tasks.withType(Test) {
     }
 }
 
-
+/*
 tasks.register('tiaTests', com.teamscale.TestImpacted) {
     useJUnitPlatform()
     jacoco {
         includes = ["tia.*"]
     }
 }
+*/
 
