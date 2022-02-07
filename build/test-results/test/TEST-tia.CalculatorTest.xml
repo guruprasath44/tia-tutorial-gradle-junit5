@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tia.CalculatorTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-02-07T14:50:54" hostname="LAPTOP-BB6S6IG2" time="0.037">
+  <properties/>
+  <testcase name="testSum()" classname="tia.CalculatorTest" time="0.029"/>
+  <testcase name="testMinus()" classname="tia.CalculatorTest" time="0.007"/>
+  <system-out><![CDATA[guruprasath
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
