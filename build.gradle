@@ -1,12 +1,17 @@
 plugins {
      id "com.teamscale" version "21.9.0"
+    
 }
+plugins {
+id "com.gorylenko.gradle-git-properties" version "2.2.2"
+}
+
 teamscale {
 
     server {
         url = 'http://localhost:8080/'
         userName = 'admin'
-        userAccessToken = 'eZcmUZs4jHGQ0UUl5TYArQIpBLzfJ0X5'
+        userAccessToken = 'q9N2q4nbn5R16ppaokFLRGBrnNGCFVPm'
         project = 'tia-junit5'
     }
 
