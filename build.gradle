@@ -30,6 +30,20 @@ jacocoTestReport {
 
 -javaagent:TEAMSCALE_JACOCO_AGENT_DIR/lib/teamscale-jacoco-agent.jar
 
+plugins {
+	id 'org.ajoberstar.grgit' version '2.3.0'
+}
+
+jar {
+	manifest {
+		attributes 'Branch': System.getProperty("branch")
+		attributes 'Timestamp': grgit.log {
+			maxCommits = 1
+		}.first().dateTime.toInstant().toEpochMilli()
+	}
+}
+
+./gradlew jar -Dbranch=master
 group 'eu.cqse.tutorials'
 version '1.0-SNAPSHOT'
 
