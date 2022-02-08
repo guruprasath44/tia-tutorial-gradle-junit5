@@ -28,6 +28,8 @@ jacocoTestReport {
     dependsOn test // tests are required to run before generating the report
 }
 
+-javaagent:TEAMSCALE_JACOCO_AGENT_DIR/lib/teamscale-jacoco-agent.jar
+
 group 'eu.cqse.tutorials'
 version '1.0-SNAPSHOT'
 
