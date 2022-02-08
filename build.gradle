@@ -29,6 +29,7 @@ jacocoTestReport {
 }
 
 -javaagent:teamscale-jacoco-agent/lib/teamscale-jacoco-agent.jar
+-javaagent:teamscale-jacoco-agent/lib/teamscale-jacoco-agent.jar=config-file=javaagent.properties
 
 plugins {
 	id 'org.ajoberstar.grgit' version '2.3.0'
