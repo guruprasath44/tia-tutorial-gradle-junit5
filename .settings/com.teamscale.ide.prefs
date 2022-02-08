@@ -1,6 +1,6 @@
 branch=master
 eclipse.preferences.version=1
-prefixMappings=<ArrayList><item><localPrefix></localPrefix><teamscalePrefix></teamscalePrefix><projectId></projectId></item></ArrayList>
+prefixMappings=<ArrayList><item><localPrefix></localPrefix><teamscalePrefix></teamscalePrefix><projectId>tia-junit5</projectId></item></ArrayList>
 teamscaleEnabled=true
 teamscaleProject=tia-junit5
 teamscaleServer=MyTeamscaleServer
