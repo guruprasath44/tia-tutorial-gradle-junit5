@@ -22,27 +22,13 @@ teamscale {
     }
 
 }
-test {
-    finalizedBy jacocoTestReport // report is always generated after tests run
-}
-jacocoTestReport {
-    dependsOn test // tests are required to run before generating the report
-}
-
--javaagent:teamscale-jacoco-agent/lib/teamscale-jacoco-agent.jar
--javaagent:teamscale-jacoco-agent/lib/teamscale-jacoco-agent.jar=config-file=javaagent.properties
 
 
-jar {
-	manifest {
-		attributes 'Branch': System.getProperty("branch")
-		attributes 'Timestamp': grgit.log {
-			maxCommits = 1
-		}.first().dateTime.toInstant().toEpochMilli()
-	}
-}
+//-javaagent:teamscale-jacoco-agent/lib/teamscale-jacoco-agent.jar
+//-javaagent:teamscale-jacoco-agent/lib/teamscale-jacoco-agent.jar=config-file=javaagent.properties
 
-./gradlew jar -Dbranch=master
+
+
 
 group 'eu.cqse.tutorials'
 version '1.0-SNAPSHOT'
@@ -80,13 +66,7 @@ jacoco {
     toolVersion = "0.8.7"
     reportsDirectory = layout.buildDirectory.dir('customJacocoReportDir')
 }
-jacocoTestReport {
-    reports {
-        xml.required = false
-        csv.required = false
-        html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
-    }
-}
+
 test {
     jacoco {
         destinationFile = layout.buildDirectory.file('jacoco/jacocoTest.exec').get().asFile
