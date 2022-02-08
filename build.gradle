@@ -2,6 +2,7 @@ plugins {
      id "com.teamscale" version "21.9.0"
     id "com.gorylenko.gradle-git-properties" version "2.2.2"
     id 'jacoco'
+    id 'org.ajoberstar.grgit' version '2.3.0'
 }
 
 
@@ -31,9 +32,6 @@ jacocoTestReport {
 -javaagent:teamscale-jacoco-agent/lib/teamscale-jacoco-agent.jar
 -javaagent:teamscale-jacoco-agent/lib/teamscale-jacoco-agent.jar=config-file=javaagent.properties
 
-plugins {
-	id 'org.ajoberstar.grgit' version '2.3.0'
-}
 
 jar {
 	manifest {
