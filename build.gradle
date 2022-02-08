@@ -1,10 +1,9 @@
 plugins {
      id "com.teamscale" version "21.9.0"
-    
+    id "com.gorylenko.gradle-git-properties" version "2.2.2"
+    id 'jacoco'
 }
-plugins {
-id "com.gorylenko.gradle-git-properties" version "2.2.2"
-}
+
 
 teamscale {
 
@@ -22,7 +21,12 @@ teamscale {
     }
 
 }
-
+test {
+    finalizedBy jacocoTestReport // report is always generated after tests run
+}
+jacocoTestReport {
+    dependsOn test // tests are required to run before generating the report
+}
 
 group 'eu.cqse.tutorials'
 version '1.0-SNAPSHOT'
@@ -56,8 +60,23 @@ tasks.withType(Test) {
     }
 }
 
-
-
+jacoco {
+    toolVersion = "0.8.7"
+    reportsDirectory = layout.buildDirectory.dir('customJacocoReportDir')
+}
+jacocoTestReport {
+    reports {
+        xml.required = false
+        csv.required = false
+        html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
+    }
+}
+test {
+    jacoco {
+        destinationFile = layout.buildDirectory.file('jacoco/jacocoTest.exec').get().asFile
+        classDumpDir = layout.buildDirectory.dir('jacoco/classpathdumps').get().asFile
+    }
+}
 tasks.register('tiaTests', com.teamscale.TestImpacted) {
     useJUnitPlatform()
     jacoco {
